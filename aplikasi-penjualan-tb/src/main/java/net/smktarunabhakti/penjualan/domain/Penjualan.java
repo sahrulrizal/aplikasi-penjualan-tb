@@ -18,7 +18,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
- * @author jimmy
+ *
  */
 @Entity
 @Table(name = "trx_jual_header")
