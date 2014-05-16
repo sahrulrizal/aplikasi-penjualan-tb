@@ -31,7 +31,7 @@
         p:password="${jdbc.password}" p:maxWait="40000" p:maxActive="80"
         p:maxIdle="20" />
     
-    <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transaction">
+    <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
         <property name="jpaDialect">
         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>

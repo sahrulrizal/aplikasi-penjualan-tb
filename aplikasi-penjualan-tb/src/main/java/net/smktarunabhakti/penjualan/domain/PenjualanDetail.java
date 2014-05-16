@@ -10,10 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- *
- * @author jimmy
- */
+
 @Entity
 @Table(name="trx_jual_detail")
 public class PenjualanDetail implements Serializable{
