@@ -25,15 +25,15 @@
     <context:annotation-config/>
     <tx:annotation-driven/>
     
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasisDataSource"
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         destroy-method="close" p:driverClassName="${jdbc.driver}"
         p:url="${jdbc.url}" p:username="${jdbc.username}"
         p:password="${jdbc.password}" p:maxWait="40000" p:maxActive="80"
         p:maxIdle="20" />
     
     <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transaction">
-        <property name="entityManagerFactory" ref="entityManagerFactory">
-        <property name="jpaDialect"/>
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+        <property name="jpaDialect">
         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
         </property>
     </bean>
@@ -46,7 +46,7 @@
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="databasePlatform" value="${hibernate.dialect}"/>
                 <property name="showSql" value="true"/>
-                <property name="generateDdl" value="flase"/>
+                <property name="generateDdl" value="false"/>
             </bean>
         </property>
         

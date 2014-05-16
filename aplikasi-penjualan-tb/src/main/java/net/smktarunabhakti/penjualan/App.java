@@ -13,6 +13,6 @@ public class App
     
     public static void main( String[] args )
     {
-        appCtx = new ClassPathXmlApplicationContext("classpath:net/smktarunabhakti/penjualan/"+"applicationContext/xml");
+        appCtx = new ClassPathXmlApplicationContext("classpath:net/smktarunabhakti/penjualan/"+"applicationContext.xml");
     }
 }
