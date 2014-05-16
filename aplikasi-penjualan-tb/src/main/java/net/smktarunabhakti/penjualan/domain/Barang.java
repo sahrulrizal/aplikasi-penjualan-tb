@@ -13,6 +13,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name="m_barang")
 public class Barang implements Serializable{
